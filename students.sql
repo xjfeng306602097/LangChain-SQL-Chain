@@ -31,6 +31,7 @@ CREATE TABLE `parents` (
   `student_name` varchar(20) DEFAULT '',
   `parent_name` varchar(20) DEFAULT NULL,
   `parent_mobile` varchar(10) DEFAULT NULL,
+  `education_level` varchar(30) DEFAULT NULL,
   PRIMARY KEY (`id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
@@ -39,10 +40,10 @@ LOCK TABLES `parents` WRITE;
 
 INSERT INTO `parents` (`id`, `student_name`, `parent_name`, `parent_mobile`)
 VALUES
-	(1,'Alex','Barry','0881234567'),
-	(2,'Alice','Jessica','0891234567'),
-	(3,'Jack','Simon','0876666666'),
-	(5,'Ophelia','Tracy','0881111111');
+	(1,'Alex','Barry','0881234567', 'University'),
+	(2,'Alice','Jessica','0891234567', 'University'),
+	(3,'Jack','Simon','0876666666', 'University'),
+	(5,'Ophelia','Tracy','0881111111', 'High school');
 
 /*!40000 ALTER TABLE `parents` ENABLE KEYS */;
 UNLOCK TABLES;
